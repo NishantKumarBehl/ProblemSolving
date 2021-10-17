@@ -35,7 +35,7 @@ public class TwoSum {
 
     //OPTIMIZED SOLUTION USING HASHMAP
     // #1 - return the numbers using HashSets
-
+/*
     public static int[] findSumOfTwo(int[] arr, int target) {
         var output = new int[]{0,0};
         
@@ -54,7 +54,13 @@ public class TwoSum {
          }   
         return output;
     }
-
+*/
+    // #2 - return the indices using HashMap
+    public static int[] findSumOfTwo(int[] arr,int target) {
+        int[] output = {0,0};
+        
+        return output;
+    }
     
 
 public static void main(String[] args) {
