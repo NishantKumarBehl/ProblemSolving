@@ -1,5 +1,7 @@
 import java.lang.module.FindException;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 
 
@@ -58,7 +60,20 @@ public class TwoSum {
     // #2 - return the indices using HashMap
     public static int[] findSumOfTwo(int[] arr,int target) {
         int[] output = {0,0};
+        Map<Integer,Integer> hsmap = new HashMap<>();
+
+        for(int i=0;i<arr.length;i++){
+            int numberToFind = target -arr[i];
+
+            if (hsmap.containsKey(numberToFind)){
+                output[0] = i;
+                output[1] = hsmap.get(numberToFind);
+            }
+
+            hsmap.put(numberToFind, i);
+        }
         
+
         return output;
     }
     
