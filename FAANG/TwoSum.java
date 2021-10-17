@@ -68,9 +68,10 @@ public class TwoSum {
             if (hsmap.containsKey(numberToFind)){
                 output[0] = i;
                 output[1] = hsmap.get(numberToFind);
+                return output;
             }
 
-            hsmap.put(numberToFind, i);
+            hsmap.put(arr[i], i);
         }
         
 
@@ -79,7 +80,7 @@ public class TwoSum {
     
 
 public static void main(String[] args) {
-    int targetVar = 10;
+    int targetVar = 11;
     int arr[] = {1,3,7,9,2};
     
     int prt[] = TwoSum.findSumOfTwo(arr, targetVar);
